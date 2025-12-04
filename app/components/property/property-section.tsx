@@ -98,7 +98,7 @@ export default function PropertySection() {
           Discover Handpicked Homes That{" "}
           <AnimatedShinyText
             shimmerWidth={150}
-            className="font-serif italic text-primary"
+            className="font-serif italic text-primary text-shadow-md"
           >
             Define Elegance
           </AnimatedShinyText>
