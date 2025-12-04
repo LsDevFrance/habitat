@@ -86,7 +86,7 @@ export default function PropertySection() {
   };
 
   return (
-    <section id="properties" className="container mx-auto px-4 py-16 md:py-24">
+    <section id="properties" className="container mx-auto px-4 py-16  mt-12">
       <motion.div
         className="mb-12 mx-auto max-w-lg text-center"
         initial={{ opacity: 0, y: 20 }}

@@ -80,7 +80,7 @@ export default function ButtonAi() {
           <SheetHeader>
             <SheetTitle className="flex items-center gap-2">
               <BotIcon className="size-5" />
-              Chat avec l'IA
+              Chat avec l&apos;IA
             </SheetTitle>
             <SheetDescription>
               Posez vos questions sur les propriétés disponibles
@@ -92,7 +92,7 @@ export default function ButtonAi() {
               <div className="flex items-center justify-center h-full text-muted-foreground text-center px-4">
                 <div>
                   <BotIcon className="size-12 mx-auto mb-4 opacity-50" />
-                  <p>Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
+                  <p>Bonjour ! Comment puis-je vous aider aujourd&apos;hui ?</p>
                 </div>
               </div>
             ) : (
