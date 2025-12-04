@@ -6,7 +6,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { Menu, Phone, X } from "lucide-react";
-import { AnimatePresence, motion, useScroll } from "motion/react";
+import { AnimatePresence, motion, useScroll, Variants } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -163,7 +163,7 @@ export function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              variants={drawerVariants}
+              variants={drawerVariants as Variants}
             >
               {/* Mobile menu content */}
               <div className="flex flex-col gap-4">
