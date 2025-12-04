@@ -68,7 +68,7 @@ export default function ButtonAi() {
             variant="outline"
           >
             <BotIcon />
-            Chat with AI
+            Chat with <span className="font-serif italic">AI</span>
             <BorderBeam
               size={50}
               duration={2}
