@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export default function Cta() {
   return (
     <section className="container mx-auto px-4 py-16 ">
-      <div className="bg-blue-500 rounded-lg p-4">
+      <div className="bg-primary rounded-lg p-8">
         {/* Left side - Text content */}
         <motion.div
           className="space-y-6 text-white"
