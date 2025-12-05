@@ -33,7 +33,7 @@ export default function PropertyCard({
           <span className="text-sm">{location}</span>
         </div>
         <p className="mb-4 text-sm text-muted-foreground">{description}</p>
-        <p className="text-lg font-bold text-primary">{price}</p>
+        <p className="text-lg font-bold text-primary italic">{price}</p>
       </div>
     </div>
   );

@@ -20,6 +20,8 @@ export const siteConfig = {
     links: [
       { id: 1, name: "Accueil", href: "#hero" },
       { id: 2, name: "Propriétés", href: "#properties" },
+      { id: 3, name: "À propos", href: "#about" },
+      { id: 4, name: "Avis", href: "#review" },
     ],
   },
   hero: {

@@ -360,7 +360,7 @@ function SelectPopup({
     }
 
     return cssAnimationPresets.scale;
-  }, [animationPreset, reduceMotion]);
+  }, [animationPreset, reduceMotion, side]);
 
   const cssTransitionConfig = useMemo(() => {
     if (reduceMotion) return "";
@@ -370,7 +370,7 @@ function SelectPopup({
     }
 
     return cssTransitionPresets.snappyOut;
-  }, [transitionPreset, reduceMotion]);
+  }, [transitionPreset, reduceMotion, side]);
 
   return (
     <SelectPositioner

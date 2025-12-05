@@ -1,3 +1,4 @@
+import { DoorAnimation } from "@/components/door-animation";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import ButtonAi from "./components/ai/button-ai";
@@ -26,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
+      <DoorAnimation />
       <Navbar />
       {children}
       <Footer />

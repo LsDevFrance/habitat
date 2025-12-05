@@ -88,14 +88,15 @@ export default function PropertySection() {
   return (
     <section id="properties" className="container mx-auto px-4 py-16  mt-12">
       <motion.div
-        className="mb-12 mx-auto max-w-lg text-center"
+        className="mb-12 mx-auto max-w-2xl text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="mb-4 text-2xl  md:text-3xl lg:text-4xl">
-          Discover Handpicked Homes That{" "}
+          Discover Handpicked Homes
+          <br /> That
           <AnimatedShinyText
             shimmerWidth={150}
             className="font-serif italic text-primary text-shadow-md"
@@ -156,39 +157,42 @@ export default function PropertySection() {
         </Button>
       </motion.div>
 
-      {/* Properties Grid */}
-      <motion.div
-        className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.1,
+      <div className="flex gap-6 flex-col items-center">
+        {/* Properties Grid */}
+        <motion.div
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
             },
-          },
-        }}
-      >
-        {properties.map((property) => (
-          <motion.div
-            key={property.id}
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <PropertyCard
-              title={property.title}
-              location={property.location}
-              description={property.description}
-              price={property.price}
-              image={property.image}
-            />
-          </motion.div>
-        ))}
-      </motion.div>
+          }}
+        >
+          {properties.map((property) => (
+            <motion.div
+              key={property.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <PropertyCard
+                title={property.title}
+                location={property.location}
+                description={property.description}
+                price={property.price}
+                image={property.image}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+        <Button className=" mx-auto">Explore More</Button>
+      </div>
     </section>
   );
 }
