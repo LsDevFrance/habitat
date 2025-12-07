@@ -1,4 +1,4 @@
-import { DoorAnimation } from "@/components/door-animation";
+import { DoorAnimation } from "@/components/open-animation/door-animation";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import ButtonAi from "./components/ai/button-ai";

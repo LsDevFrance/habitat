@@ -66,24 +66,6 @@ export function Footer() {
 
   return (
     <footer className="footer">
-      <div className="flex w-full flex-col px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10">
-        <div className="flex w-full items-center justify-between gap-x-3 lg:pl-10">
-          {siteConfig.footerLinks.map((column, columnIndex) => (
-            <ul key={columnIndex} className="flex flex-col gap-y-2">
-              <li className="text-[15px]/normal font-semibold text-neutral-900 dark:text-white mb-1">
-                {column.title}
-              </li>
-              {column.links.map((link) => (
-                <a href={link.url} key={link.id}>
-                  <li className="text-[15px]/normal font-medium text-neutral-400 transition-all duration-100 ease-linear hover:text-neutral-900 hover:underline hover:underline-offset-4 dark:font-medium dark:text-neutral-400 hover:dark:text-neutral-100">
-                    {link.title}
-                  </li>
-                </a>
-              ))}
-            </ul>
-          ))}
-        </div>
-      </div>
       <div className="flex flex-col justify-between gap-y-5 border-t border-neutral-500/20 bg-neutral-100 px-7 py-10 md:flex-row md:items-center md:px-10 dark:border-neutral-700/50 dark:bg-neutral-900">
         <div className="flex flex-col items-start justify-start gap-y-3.5">
           <a href={siteConfig.url} className="flex items-center gap-x-2.5">

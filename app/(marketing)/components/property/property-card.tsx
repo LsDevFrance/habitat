@@ -1,7 +1,9 @@
 import { MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface PropertyCardProps {
+  id?: number;
   title: string;
   location: string;
   description: string;
@@ -10,13 +12,14 @@ interface PropertyCardProps {
 }
 
 export default function PropertyCard({
+  id,
   title,
   location,
   description,
   price,
   image,
 }: PropertyCardProps) {
-  return (
+  const CardContent = (
     <div className="group cursor-pointer overflow-hidden rounded-lg bg-card shadow-sm transition-all duration-300 hover:shadow-lg">
       <div className="relative h-64 w-full overflow-hidden">
         <Image
@@ -37,4 +40,10 @@ export default function PropertyCard({
       </div>
     </div>
   );
+
+  if (id) {
+    return <Link href={`/propertys/${id}`}>{CardContent}</Link>;
+  }
+
+  return CardContent;
 }

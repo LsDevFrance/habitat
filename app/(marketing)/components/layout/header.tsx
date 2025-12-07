@@ -1,7 +1,7 @@
 "use client";
 
+import { NavMenu } from "@/app/(marketing)/components/layout/nav-menu";
 import { Icons } from "@/components/icons";
-import { NavMenu } from "@/components/nav-menu";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
@@ -113,7 +113,9 @@ export function Navbar() {
           <div className="flex h-[56px] items-center justify-between p-4">
             <Link href="/" className="flex items-center gap-3">
               <Icons.logo className="size-7 md:size-10" />
-              <p className="text-lg font-bold text-primary">Habitat </p>
+              <p className="text-lg font-bold text-primary">
+                {siteConfig.name}{" "}
+              </p>
             </Link>
 
             <NavMenu />
@@ -125,7 +127,7 @@ export function Navbar() {
                   className={buttonVariants({ variant: "secondary" })}
                 >
                   <Phone className="size-5" />
-                  Call us
+                  {siteConfig.cta}
                 </Link>
               </div>
 
@@ -171,7 +173,7 @@ export function Navbar() {
                   <Link href="/" className="flex items-center gap-3">
                     <Icons.logo className="size-7 md:size-10" />
                     <p className="text-lg font-semibold text-primary">
-                      Habitat Horizon
+                      {siteConfig.name}
                     </p>
                   </Link>
                   <button
@@ -223,7 +225,7 @@ export function Navbar() {
                     className={buttonVariants({ variant: "secondary" })}
                   >
                     <Phone className="size-5" />
-                    Call us
+                    {siteConfig.cta}
                   </Link>
                 </div>
               </div>
